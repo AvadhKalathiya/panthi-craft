@@ -2,7 +2,7 @@ import {
   collection, doc, getDocs, getDoc, addDoc, updateDoc, deleteDoc,
   query, where, orderBy, limit, onSnapshot, serverTimestamp, Timestamp
 } from 'firebase/firestore';
-import { ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { db, storage, hasConfig } from './firebase';
 import type { Product } from '@/types/product';
 
@@ -77,35 +77,43 @@ export async function toggleProductActive(id: string, currentStatus: boolean): P
   });
 }
 
-export function uploadProductImages(
+export async function uploadProductImages(
   files: File[],
   onProgress?: (percent: number) => void
 ): Promise<string[]> {
   if (!storage) throw new Error('Firebase Storage not configured');
   
-  return Promise.all(
-    files.map(
-      (file) =>
-        new Promise<string>((resolve, reject) => {
-          const path = `products/${Date.now()}_${file.name}`;
-          const storageRef = ref(storage!, path);
-          const task = uploadBytesResumable(storageRef, file);
+  const uploadPromises = files.map(async (file) => {
+    try {
+      console.log(`[Firebase] Starting upload for ${file.name}...`);
+      
+      // Clean filename for safety
+      const cleanName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
+      const path = `products/${Date.now()}_${cleanName}`;
+      const storageRef = ref(storage!, path);
 
-          task.on(
-            'state_changed',
-            (snap) => {
-              const pct = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
-              onProgress?.(pct);
-            },
-            reject,
-            async () => {
-              const url = await getDownloadURL(task.snapshot.ref);
-              resolve(url);
-            }
-          );
-        })
-    )
-  );
+      // We simulate progress for standard uploads so the UI still updates
+      onProgress?.(25);
+      
+      // Using standard uploadBytes instead of resumable which can silently hang
+      console.log(`[Firebase] Uploading to path: ${path}`);
+      const snapshot = await uploadBytes(storageRef, file);
+      console.log(`[Firebase] Upload successful! Getting URL...`);
+      
+      onProgress?.(75);
+      
+      const url = await getDownloadURL(snapshot.ref);
+      console.log(`[Firebase] URL retrieved: ${url}`);
+      
+      onProgress?.(100);
+      return url;
+    } catch (error: any) {
+      console.error(`[Firebase] Critical Upload Error handling ${file.name}:`, error);
+      throw new Error(`Upload failed: ${error.message || 'Unknown network/rules error'}`);
+    }
+  });
+
+  return Promise.all(uploadPromises);
 }
 
 export async function deleteProductImage(url: string): Promise<void> {
