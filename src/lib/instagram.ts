@@ -1,8 +1,9 @@
 import { toast } from "sonner";
 
 export function openInstagramDM(productName?: string, price?: number) {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
   const message = productName
-    ? `Hello! I want to order this purse.\n\nProduct: ${productName}\nPrice: ₹${price?.toLocaleString('en-IN')}\n\nPlease confirm availability and delivery details.`
+    ? `Hello! I want to order this purse.\n\nProduct: ${productName}\nPrice: ₹${price?.toLocaleString('en-IN')}\nLink: ${currentUrl}\n\nPlease confirm availability and delivery details.`
     : `Hello! I'm interested in ordering a purse from Panthi First Choice. Can you please share available options?`;
 
   if (navigator.clipboard) {
@@ -14,7 +15,7 @@ export function openInstagramDM(productName?: string, price?: number) {
   }
 
   setTimeout(() => {
-    window.open('https://www.instagram.com/panthi_first_choice/', '_blank');
+    window.open('https://ig.me/m/panthi_first_choice', '_blank');
   }, 200);
 }
 

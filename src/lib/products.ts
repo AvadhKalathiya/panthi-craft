@@ -246,8 +246,9 @@ export const products: Product[] = [
 export const categories = ["All", "Tote Bags", "Clutches", "Sling Bags", "Shoulder Bags"];
 
 export function openInstagramDM(productName = '', price = '') {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
   const message = productName
-    ? `Hello! I want to order this purse.\n\nProduct: ${productName}\nPrice: ₹${price}\n\nPlease confirm availability and delivery details.`
+    ? `Hello! I want to order this purse.\n\nProduct: ${productName}\nPrice: ₹${price}\nLink: ${currentUrl}\n\nPlease confirm availability and delivery details.`
     : `Hello! I'm interested in ordering a purse from Panthi First Choice. Can you please share available options?`;
 
   if (navigator.clipboard) {
@@ -255,7 +256,7 @@ export function openInstagramDM(productName = '', price = '') {
   }
 
   setTimeout(() => {
-    window.open('https://www.instagram.com/panthi_first_choice/', '_blank');
+    window.open('https://ig.me/m/panthi_first_choice', '_blank');
   }, 300);
 
   return message;
