@@ -87,7 +87,7 @@ export default function Footer() {
             © 2026 Panthi First Choice. All rights reserved.
           </span>
           <span className="font-sans font-light text-xs text-primary-foreground/35">
-            Handmade with Avadh Kalathiya
+            Made By Avadh Kalathiya
           </span>
         </div>
       </div>
