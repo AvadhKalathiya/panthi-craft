@@ -84,10 +84,10 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/[0.08] pt-6 flex flex-col sm:flex-row justify-between items-center gap-2">
           <span className="font-sans font-light text-xs text-primary-foreground/35">
-            © 2025 Panthi First Choice. All rights reserved.
+            © 2026 Panthi First Choice. All rights reserved.
           </span>
           <span className="font-sans font-light text-xs text-primary-foreground/35">
-            Handmade with ❤️ in India
+            Handmade with Avadh Kalathiya
           </span>
         </div>
       </div>
