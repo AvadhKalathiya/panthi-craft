@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Palette — Luxury Cream/Gold */
+    --background: 39 45% 97%;
+    --foreground: 27 18% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 27 18% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 18% 9%;
+
+    --primary: 37 40% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 27% 91%;
+    --secondary-foreground: 27 18% 9%;
+
+    --muted: 25 14% 50%;
+    --muted-foreground: 25 14% 50%;
+
+    --accent: 222 66% 33%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 28 20% 85%;
+    --input: 28 20% 85%;
+    --ring: 37 40% 61%;
+
+    --radius: 0px;
+
+    /* Extended palette */
+    --cream: 39 45% 97%;
+    --beige: 30 27% 91%;
+    --sand: 28 20% 85%;
+    --blush: 20 35% 93%;
+    --gold: 37 40% 61%;
+    --gold-light: 40 52% 77%;
+    --gold-deep: 37 45% 45%;
+    --gold-subtle: 37 50% 89%;
+    --charcoal: 20 10% 22%;
+    --navy: 222 66% 33%;
+    --dark: 27 18% 9%;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(26,23,20,0.06);
+    --shadow-md: 0 8px 32px rgba(26,23,20,0.10);
+    --shadow-lg: 0 24px 64px rgba(26,23,20,0.14);
+    --shadow-gold: 0 8px 24px rgba(201,169,110,0.3);
+
+    /* Easing */
+    --ease-luxury: cubic-bezier(0.25, 0.10, 0.25, 1.00);
+    --ease-reveal: cubic-bezier(0.16, 1.00, 0.30, 1.00);
+    --ease-image: cubic-bezier(0.45, 0.00, 0.55, 1.00);
+
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Jost', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: hsl(var(--gold));
+  }
+
+  /* Luxury card */
+  .luxury-card {
+    background: hsl(var(--card));
+    box-shadow: var(--shadow-sm);
+    transition: transform 400ms var(--ease-luxury), box-shadow 400ms var(--ease-luxury);
+  }
+  .luxury-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Image containers */
+  .img-portrait {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: hsl(var(--beige));
+  }
+  .img-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 600ms var(--ease-image);
+  }
+  .luxury-card:hover .img-portrait img {
+    transform: scale(1.07);
+  }
+
+  .img-square {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: hsl(var(--beige));
+  }
+  .img-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Gold underline animation */
+  .gold-underline {
+    position: relative;
+  }
+  .gold-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: hsl(var(--gold));
+    transition: width 400ms var(--ease-luxury);
+  }
+  .luxury-card:hover .gold-underline::after {
+    width: 100%;
+  }
+
+  /* Marquee */
+  .marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Pulse ring for floating button */
+  .pulse-ring::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid hsl(var(--gold) / 0.6);
+    animation: pulse-ring 3s ease-out infinite;
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+
+  /* Scroll indicator bounce */
+  .scroll-bounce {
+    animation: scroll-bounce 1.5s ease-in-out infinite;
+  }
+  @keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  /* Nav scroll state */
+  .nav-scrolled {
+    background: hsl(var(--cream) / 0.96) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid hsl(var(--sand));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--cream)); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--gold)); }
+
+  /* Toast */
+  .toast-active {
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    font-size: clamp(3.5rem, 9vw, 8rem);
+  }
+  .text-display {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+  }
+  .text-h1 {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  }
+  .text-h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+  }
+  .text-h3 {
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+  }
+}
