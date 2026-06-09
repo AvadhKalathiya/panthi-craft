@@ -2,300 +2,258 @@
 
 # 🎨 Panthi Craft
 
-### Crafting Tradition Into a Modern Digital Experience
+### Transforming Traditional Craftsmanship Into A Modern Digital Experience
 
 <p align="center">
-A professional, responsive, and production-ready business website designed to help local artisans and craft businesses establish a strong online presence, showcase their products, and connect with customers worldwide.
+A premium business website built to help local artisans establish a powerful online presence, showcase handcrafted products, and connect with customers worldwide.
 </p>
 
-<p align="center">
+<br>
 
-<img src="https://img.shields.io/badge/Status-Live%20in%20Production-success?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Frontend-React.js-61DAFB?style=for-the-badge&logo=react" />
-<img src="https://img.shields.io/badge/Build-Vite-646CFF?style=for-the-badge&logo=vite" />
-<img src="https://img.shields.io/badge/Backend-Supabase-3FCF8E?style=for-the-badge&logo=supabase" />
-<img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel" />
-<img src="https://img.shields.io/badge/Open%20Source-Yes-blue?style=for-the-badge" />
+### 🔗 Quick Navigation
 
-</p>
-
-<p align="center">
-
-<a href="https://panthi-craft.vercel.app/">🌐 Live Demo</a> • <a href="https://github.com/AvadhKalathiya/panthi-craft">📂 Repository</a> • <a href="https://github.com/AvadhKalathiya">👨‍💻 Developer</a>
-
-</p>
+[🌐 Live Demo](https://panthi-craft.vercel.app/) •
+[📂 Source Code](https://github.com/AvadhKalathiya/panthi-craft) •
+[🚀 Features](#-key-features) •
+[🛠 Tech Stack](#-technology-stack) •
+[📸 Screenshots](#-project-preview) •
+[👨‍💻 Developer](#-developer)
 
 </div>
 
 ---
 
-# 📖 About The Project
+# 🌟 Why This Project Matters
 
-In today's digital-first world, many local businesses struggle to establish a strong online identity. Traditional craft businesses often rely solely on offline customers, limiting their growth potential and market reach.
+Many local businesses still struggle to establish a professional digital presence despite offering exceptional products and services.
 
-**Panthi Craft** was developed to bridge this gap by providing a modern, elegant, and highly responsive web platform that helps businesses showcase their products professionally while delivering an exceptional user experience across all devices.
+Panthi Craft was created to solve this challenge by providing:
 
-The project focuses on:
+✅ Professional Branding
 
-✅ Professional Brand Presentation
+✅ Modern Customer Experience
 
-✅ Product Visibility Enhancement
+✅ Mobile Accessibility
 
-✅ Customer Engagement
+✅ Fast Performance
 
-✅ Mobile-First Experience
+✅ Product Visibility
 
-✅ High Performance & Accessibility
+✅ Business Growth Opportunities
 
-✅ Scalable Architecture
-
-✅ Production-Ready Deployment
+The project demonstrates how technology can empower traditional businesses to compete effectively in today's digital marketplace.
 
 ---
 
-# 🎯 Business Objectives
+# 📊 Project Statistics
 
-| Objective                 | Impact                         |
-| ------------------------- | ------------------------------ |
-| Establish Online Presence | Increase brand visibility      |
-| Showcase Products         | Improve product discovery      |
-| Mobile Accessibility      | Reach customers on all devices |
-| Fast Performance          | Improve user retention         |
-| Professional Design       | Increase customer trust        |
-| Future Scalability        | Enable long-term growth        |
-
----
-
-# ✨ Key Features
-
-### 🎨 Professional UI & UX
-
-* Modern and elegant interface
-* Clean visual hierarchy
-* User-focused navigation
-* Consistent branding
-
-### 📱 Fully Responsive Design
-
-* Mobile Friendly
-* Tablet Optimized
-* Desktop Ready
-* Cross-Browser Compatible
-
-### ⚡ Performance Optimized
-
-* Fast Initial Load
-* Optimized Assets
-* Efficient Rendering
-* Production Build Optimization
-
-### 🛍 Product Showcase
-
-* Structured Product Layout
-* Easy Browsing Experience
-* Clear Product Presentation
-* Business-Oriented Design
-
-### 🔒 Reliable Infrastructure
-
-* Supabase Integration
-* Secure Data Handling
-* Production Deployment
-* Scalable Foundation
-
-### 🚀 Modern Development Practices
-
-* Component-Based Architecture
-* Reusable Code Structure
-* Git Version Control
-* Continuous Deployment
+| Metric           | Value              |
+| ---------------- | ------------------ |
+| Status           | ✅ Production Ready |
+| Version          | v1.0.0             |
+| Responsive       | ✅ Yes              |
+| Mobile Optimized | ✅ Yes              |
+| SEO Friendly     | ✅ Yes              |
+| Hosting          | Vercel             |
+| Backend          | Supabase           |
+| UI Framework     | React              |
+| Build Tool       | Vite               |
 
 ---
 
-# 🛠 Technology Stack
+# 📂 Project Structure
 
-## Frontend
-
-| Technology | Purpose           |
-| ---------- | ----------------- |
-| React.js   | UI Development    |
-| Vite       | Build Tool        |
-| JavaScript | Application Logic |
-| HTML5      | Markup Structure  |
-| CSS3       | Styling           |
-
-## Backend & Services
-
-| Technology           | Purpose          |
-| -------------------- | ---------------- |
-| Supabase             | Backend Services |
-| Database             | Data Storage     |
-| Authentication Ready | Future Expansion |
-
-## Deployment
-
-| Technology | Purpose              |
-| ---------- | -------------------- |
-| Vercel     | Hosting & Deployment |
-
-## Development Tools
-
-| Tool    | Purpose                 |
-| ------- | ----------------------- |
-| Git     | Version Control         |
-| GitHub  | Repository Management   |
-| VS Code | Development Environment |
-
----
-
-# 🏗 System Architecture
-
-```mermaid
-graph TD
-
-A[Visitors]
-
-A --> B[React Frontend]
-
-B --> C[Components]
-
-B --> D[Pages]
-
-B --> E[Business Content]
-
-C --> F[Supabase Backend]
-
-F --> G[Database]
-
-F --> H[Future Features]
-
-B --> I[Vercel Deployment]
-
-I --> J[Production Website]
+```bash
+panthi-craft
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── services/
+│   ├── styles/
+│   ├── utils/
+│   └── App.jsx
+│
+├── supabase/
+│
+├── package.json
+├── vite.config.js
+├── README.md
+│
+└── .env
 ```
 
-### Architecture Overview
+### Folder Overview
 
-The application follows a modern frontend architecture using React and Vite. User interactions are handled through reusable components, while backend services are managed through Supabase. Deployment is automated through Vercel, ensuring high availability and fast global delivery.
-
----
-
-# 📸 Project Preview
-
-### Home Page
-
-![Homepage](images/homepage.png)
-
-### Product Showcase
-
-![Products](images/products.png)
-
-### Mobile View
-
-![Mobile](images/mobile.png)
-
-### Business Information
-
-![Business](images/business.png)
+| Folder     | Purpose                     |
+| ---------- | --------------------------- |
+| assets     | Images, icons, static files |
+| components | Reusable UI components      |
+| pages      | Website pages               |
+| hooks      | Custom React hooks          |
+| services   | API & Supabase logic        |
+| styles     | Global styling              |
+| utils      | Helper functions            |
 
 ---
 
-# 📈 Business Impact
+# ⚙️ Installation
 
-## 🌍 Increased Visibility
+### Clone Repository
 
-Customers can discover products and services online from anywhere.
+```bash
+git clone https://github.com/AvadhKalathiya/panthi-craft.git
+```
 
-## 🤝 Improved Trust
+### Navigate To Project
 
-A professional digital presence increases brand credibility.
+```bash
+cd panthi-craft
+```
 
-## 📱 Better User Experience
+### Install Dependencies
 
-Responsive design ensures smooth interaction across all devices.
+```bash
+npm install
+```
 
-## 🚀 Growth Opportunities
+### Start Development Server
 
-Creates a strong foundation for future marketing and e-commerce expansion.
+```bash
+npm run dev
+```
 
-## 🏆 Competitive Advantage
+### Build Production Version
 
-Helps local businesses compete effectively in the digital marketplace.
+```bash
+npm run build
+```
 
----
+### Preview Production Build
 
-# 🏆 Project Highlights
-
-✔ Real Client-Oriented Project
-
-✔ Production Deployment
-
-✔ Modern React Architecture
-
-✔ Responsive Design
-
-✔ Business-Focused Development
-
-✔ Scalability Ready
-
-✔ Performance Optimized
-
-✔ Portfolio Grade Project
-
-✔ Open Source Repository
-
-✔ Professional UI/UX
+```bash
+npm run preview
+```
 
 ---
 
-# 👨‍💻 Developer
+# 🔐 Environment Variables
 
-## Avadh Kalathiya
+Create a .env file:
 
-Final-Year Computer Science Engineering Student & Full Stack Developer passionate about building real-world software products that solve practical business problems.
+```env
+VITE_SUPABASE_URL=your_supabase_url
 
-### Connect With Me
-
-🔗 GitHub: https://github.com/AvadhKalathiya
-
-🔗 LinkedIn: https://linkedin.com/in/avadh-kalathiya
-
-🌐 Portfolio: Add Portfolio URL
-
-📧 Email: [avadhkalathiya219@gmail.com](mailto:avadhkalathiya219@gmail.com)
+VITE_SUPABASE_ANON_KEY=your_supabase_key
+```
 
 ---
 
-# 💖 Support The Project
+# 🔄 Development Workflow
 
-If you find this project useful:
+### 1️⃣ Requirement Analysis
 
-⭐ Star the repository
+Understanding business goals and target customers.
 
-🍴 Fork the project
+### 2️⃣ UI/UX Planning
 
-📢 Share it with others
+Designing clean and user-friendly interfaces.
 
-🐛 Report issues
+### 3️⃣ Frontend Development
 
-💡 Suggest new features
+Building reusable React components.
+
+### 4️⃣ Backend Integration
+
+Connecting Supabase services.
+
+### 5️⃣ Testing
+
+Cross-browser and responsive testing.
+
+### 6️⃣ Deployment
+
+Deploying production build on Vercel.
 
 ---
 
-# 📜 License
+# 🗺️ Future Roadmap
 
-This project is licensed under the MIT License.
+### 🚧 Planned Features
+
+* User Authentication
+* Product Categories
+* Product Search
+* Wishlist
+* Shopping Cart
+* Online Ordering
+* Customer Reviews
+* WhatsApp Integration
+* SEO Enhancements
+* Analytics Dashboard
+* Admin Panel
+* Multi-Language Support
+
+---
+
+# 🚀 Deployment
+
+### Vercel Deployment
+
+```bash
+npm run build
+```
+
+Push code to GitHub and connect repository with Vercel for automatic deployments.
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork Repository
+
+2. Create Branch
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit Changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push Branch
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Create Pull Request
 
 ---
 
 <div align="center">
 
-## 🚀 Built with Passion by Avadh Kalathiya
+## ⭐ If You Like This Project
 
-### Transforming Ideas Into Real-World Digital Solutions
+Give this repository a ⭐
 
-⭐ If you like this project, please consider giving it a star.
+Share it with others 📢
 
-💙 Happy Coding!
+Follow for more projects 🚀
+
+---
+
+### Built With ❤️ By Avadh Kalathiya
+
+*"Turning ideas into impactful digital products."*
 
 </div>
