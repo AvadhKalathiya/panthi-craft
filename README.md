@@ -240,8 +240,6 @@ Final-Year Computer Science Engineering Student & Full Stack Developer passionat
 
 🔗 LinkedIn: https://linkedin.com/in/avadh-kalathiya
 
-🌐 Portfolio: Add Portfolio URL
-
 📧 Email: [avadhkalathiya219@gmail.com](mailto:avadhkalathiya219@gmail.com)
 
 ---
