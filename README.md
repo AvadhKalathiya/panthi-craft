@@ -180,26 +180,6 @@ The application follows a modern frontend architecture using React and Vite. Use
 
 ---
 
-# 📸 Project Preview
-
-### Home Page
-
-![Homepage](images/homepage.png)
-
-### Product Showcase
-
-![Products](images/products.png)
-
-### Mobile View
-
-![Mobile](images/mobile.png)
-
-### Business Information
-
-![Business](images/business.png)
-
----
-
 # 📈 Business Impact
 
 ## 🌍 Increased Visibility
